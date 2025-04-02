@@ -1,0 +1,93 @@
+<app-navbar></app-navbar>
+<div class="container my-5">
+    <h2>Ofertas y Descuentos</h2>
+    
+    <!-- Botón de Regresar -->
+    <div class="mb-4">
+        <button class="btn btn-secondary" onclick="window.history.back()">Regresar</button>
+    </div>
+
+    <!-- Filtro y ordenación -->
+    <div class="mb-4">
+        <label for="sort-by" class="form-label">Ordenar por:</label>
+        <select id="sort-by" class="form-select w-25">
+            <option value="price-asc">Precio más bajo</option>
+            <option value="price-desc">Precio más alto</option>
+            <option value="discount-asc">Descuento más bajo</option>
+            <option value="discount-desc">Descuento más alto</option>
+        </select>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th class="align-middle">Producto</th>
+                    <th class="align-middle">Imagen</th>
+                    <th class="align-middle">Precio Original</th>
+                    <th class="align-middle">Descuento</th>
+                    <th class="align-middle">Precio Final</th>
+                    <th class="align-middle">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="align-middle">PC Gamer AMD Ryzen 5 4600G</td>
+                    <td class="align-middle"><img src="assets/PcNumero15.png" class="img-fluid" alt="PC Gamer AMD Ryzen" style="width: 100px;"></td>
+                    <td class="align-middle">2800 Bs</td>
+                    <td class="align-middle">8%</td>
+                    <td class="align-middle">2576 Bs</td>
+                    <td class="align-middle"><button class="btn btn-primary">Consultar</button></td>
+                </tr>
+                <tr>
+                    <td class="align-middle">PC Escritorio AMD Ryzen 5 5600GT</td>
+                    <td class="align-middle"><img src="assets/PcNumero16.png" class="img-fluid" alt="PC Escritorio" style="width: 100px;"></td>
+                    <td class="align-middle">2430 Bs</td>
+                    <td class="align-middle">5%</td>
+                    <td class="align-middle">2310 Bs</td>
+                    <td class="align-middle"><button class="btn btn-primary">Consultar</button></td>
+                </tr>
+                <tr>
+                    <td class="align-middle">Noxi Gaming PC AMD Ryzen 5 4600G</td>
+                    <td class="align-middle"><img src="assets/PcNumero17.png" class="img-fluid" alt="Gaming PC" style="width: 100px;"></td>
+                    <td class="align-middle">3466 Bs</td>
+                    <td class="align-middle">5%</td>
+                    <td class="align-middle">3293 Bs</td>
+                    <td class="align-middle"><button class="btn btn-primary">Consultar</button></td>
+                </tr>
+                <tr>
+                    <td class="align-middle">Combo Actualización AMD Athlon 3000G</td>
+                    <td class="align-middle"><img src="assets/combo1.png" class="img-fluid" alt="Combo AMD Athlon" style="width: 100px;"></td>
+                    <td class="align-middle">1455 Bs</td>
+                    <td class="align-middle">3%</td>
+                    <td class="align-middle">1412 Bs</td>
+                    <td class="align-middle"><button class="btn btn-primary">Consultar</button></td>
+                </tr>
+                <tr>
+                    <td class="align-middle">Combo Actualización Intel Celeron G5905</td>
+                    <td class="align-middle"><img src="assets/combo2.png" class="img-fluid" alt="Combo Intel Celeron" style="width: 100px;"></td>
+                    <td class="align-middle">1380 Bs</td>
+                    <td class="align-middle">3%</td>
+                    <td class="align-middle">1339 Bs</td>
+                    <td class="align-middle"><button class="btn btn-primary">Consultar</button></td>
+                </tr>
+                <tr>
+                    <td class="align-middle">Combo Actualización AMD Ryzen 5 4600G</td>
+                    <td class="align-middle"><img src="assets/combo3.png" class="img-fluid" alt="Combo AMD Ryzen" style="width: 100px;"></td>
+                    <td class="align-middle">1500 Bs</td>
+                    <td class="align-middle">3%</td>
+                    <td class="align-middle">1455 Bs</td>
+                    <td class="align-middle"><button class="btn btn-primary">Consultar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    document.getElementById('sort-by').addEventListener('change', function() {
+        // Aquí podrías implementar la lógica para ordenar la tabla dinámicamente
+        alert('¡Funcionalidad de ordenación no implementada aún!');
+    });
+</script>
+<app-footer></app-footer>

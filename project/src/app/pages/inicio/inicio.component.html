@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>True Gaming</title>
+  <link rel="stylesheet" href="/src/styles.css">
+  <style>
+    /* Estilos adicionales para centrar todo */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+    
+    .centered-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    
+    .logos-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px 0;
+    }
+    
+    .logos-container img {
+      max-height: 60px;
+      width: auto;
+    }
+    
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      padding: 20px 0;
+    }
+    
+    .card {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <app-navbar></app-navbar>
+
+  <header class="header">
+    <div class="header-container">
+      <div class="header-content">
+        <div class="header-text">
+
+
+
+          <h1>LA MEJOR TIENDA DE COMPUTADORAS EN <br> <strong class="verde">SANTA CRUZ</strong></h1>
+          <p>
+            True Gaming te ofrece computadoras de alto rendimiento, diseñadas para gamers y profesionales que buscan potencia y velocidad en cada juego o proyecto. 
+            ¡Experimenta la diferencia con True Gaming!
+          </p>
+          <a class="btn-1" href="#">Explora nuestra tienda</a>
+        </div>
+        <div class="header-img">
+          <img loading="lazy" src="assets/logoT.png" alt="Logo True Gaming">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="m-content">
+    <div class="centered-container">
+      <div class="logos-container">
+        <img loading="lazy" src="assets/logoMSI.png" alt="Logo MSI">
+        <img loading="lazy" src="assets/logoCorsair.png" alt="Logo Corsair">
+        <img loading="lazy" src="assets/logoLenovo.png" alt="Logo Lenovo">
+        <img loading="lazy" src="assets/logoHp.png" alt="Logo Hp">
+        <img loading="lazy" src="assets/logoAsus.png" alt="Logo ASUS">
+        <img loading="lazy" src="assets/logoSamsung.png" alt="Logo Samsung">
+      </div>
+    </div>
+  </section>
+
+  <main class="principal">
+    <div class="centered-container">
+      <div class="cards-grid">
+        <div *ngFor="let producto of productosInicio | slice:0:3; let i=index" class="card">
+          <img loading="lazy" class="card-img-top" [src]="producto.img" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{producto.titulo}}</h5>
+            <p class="card-text">{{producto.mensaje}}</p>
+            <button (click)="verProducto(i)" class="btn btn-primary">Ver más detalles</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cards-grid">
+        <div *ngFor="let producto of productosInicio | slice:3:6; let i=index" class="card">
+          <img loading="lazy" class="card-img-top" [src]="producto.img" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{producto.titulo}}</h5>
+            <p class="card-text">{{producto.mensaje}}</p>
+            <button (click)="verProducto(i + 3)" class="btn btn-primary">Ver más detalles</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <app-footer></app-footer>
+</body>
+
+</html>
